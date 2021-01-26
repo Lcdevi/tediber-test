@@ -1,0 +1,33 @@
+{
+    "commandes": [
+        {   "id_cmd": "001_id", 
+            "numero_cmd": "405560003", 
+            "date_cmd": "01/05/2019", 
+            "date_exp": "03/05/2019",
+            "date_reception": "09/05/2019",
+            "adresse_livraison": "57 rue Jean Pierre Timbaud", 
+            "mode_livraison": "standard", 
+            "paiement": "visa",
+            "suivi_cmd": "step_2", 
+            "client_id": "client_01",
+            "articles" : [
+                { "id_article": "matelas001_id", "designation": "L'incroyable matelas", "quantité": 1, "largeur": "160", "longueur": "200", "prix": 750 },
+                { "id_article": "oreiller001_id", "designation": "L'incroyable oreiller", "quantité": 2, "largeur": "60 ", "longueur": "60", "prix": 85 },
+                { "id_article": "couette001_id", "designation": "l'incroyable couette", "quantité": 1, "largeur": "240", "longueur": "220", "prix": 210 }
+            ] 
+        }
+    ],
+    
+    "clients": [
+        {   "client_id": "client_01",
+            "client_prenom": "Shannon",
+            "client_nom": "Haofman",
+            "client_tel": "0165785566"
+        },
+        {   "client_id": "client_02",
+            "client_prenom": "Pierre",
+            "client_nom": "Donose",
+            "client_tel": "0786156595"
+        }
+    ]
+}
