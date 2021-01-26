@@ -21,6 +21,14 @@
   color: #2c3e50;
 }
 
+#nav {
+  text-align: center;
+}
+
+#nav a {
+  margin: 20px;
+}
+
 #nav a.router-link-exact-active {
   color: rgb(73, 73, 73);
   text-decoration: none;
