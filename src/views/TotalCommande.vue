@@ -5,13 +5,20 @@
         </div>
         <div class="main-div">
             <div class="main-content-div">
-                <p @click="addPrices">sous-total </p>
-                <div>
-                    {{ tousprix.reduce((acc, item) => acc + item, 0) }}
-                </div>    
-                
-                <p>livraison</p>
-                <p>TOTAL :</p>
+                <div id="wrap-infos">
+                    <div class="single-info">
+                        <p>Sous-total </p> 
+                        <p>{{ this.soustotal = tousprix.reduce((acc, item) => acc + item, 0) }}</p>
+                    </div>
+                    <div class="single-info">
+                        <p>Livraison</p>
+                        <p>GRATUITE</p>
+                    </div>
+                    <div class="single-info">
+                        <p>TOTAL : </p>
+                        <p>{{ soustotal + commandes.tarif_livraison}}</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -21,7 +28,13 @@
 <script>
 
 export default {
-    props: [ 'tousprix' ]
+    props: [ 'tousprix', 'commandes' ],
+
+    data() {
+        return {
+            soustotal: 0
+        }
+    }
 }
 
 </script>
@@ -43,7 +56,22 @@ export default {
     display: flex;
     padding: 18px 20px;
     flex-direction: column;
+    align-items: center;
 }
-
+#total-commande #wrap-infos {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+#total-commande .single-info {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+#total-commande .single-info:last-child {
+    font-weight: bold;
+}
 
 </style>

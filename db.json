@@ -13,6 +13,7 @@
             "paiement": "visa",
             "suivi_cmd": "step_1", 
             "client_id": "client_01",
+            "tarif_livraison": 0,
             "articles" : [
                 { "id_article": "matelas001_id", "designation": "L'incroyable matelas", "quantité": 1, "largeur": "160", "longueur": "200", "prix": 750, "image": "https://res.cloudinary.com/lcdevicloud/image/upload/v1611840989/Tediber/tediber-matelas-img_yajmbn.png" },
                 { "id_article": "oreiller001_id", "designation": "L'incroyable oreiller", "quantité": 2, "largeur": "60 ", "longueur": "60", "prix": 85, "image": "https://res.cloudinary.com/lcdevicloud/image/upload/v1611840996/Tediber/tediber-oreiller-img_x2r1qq.png" },
