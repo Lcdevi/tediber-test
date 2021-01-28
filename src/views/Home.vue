@@ -60,23 +60,23 @@ export default {
   },
 
   mounted() {
-    fetch('http://localhost:3000/commandes')
-      .then(res => res.json())
-      .then(data => {
-        console.log("data[0] >>>>>>>>>>>> ", data[0]);
-        this.commandes = data [0];
-        this.articles = data[0].articles;
-        if(data[0].paiement === "visa") {
-          this.paiement = "visa"
-        } else if(data[0].paiement === "paypal") {
-          this.paiement = "paypal"
-        } else {
-          this.paiement = "mastercard"
-        }
-      })
+      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/commandes')
+        .then(res => res.json())
+        .then(data => {
+          console.log("data[0] >>>>>>>>>>>> ", data[0]);
+          this.commandes = data [0];
+          this.articles = data[0].articles;
+          if(data[0].paiement === "visa") {
+            this.paiement = "visa"
+          } else if(data[0].paiement === "paypal") {
+            this.paiement = "paypal"
+          } else {
+            this.paiement = "mastercard"
+          }
+        })
       .catch(err => console.log(err.message))
 
-      fetch('http://localhost:3000/clients')
+      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/clients')
         .then(res => res.json())
         .then(data => {
           console.log("data clients >>>>>>>>>>", data)
