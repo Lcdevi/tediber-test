@@ -9,7 +9,6 @@
                     <img src="../assets/logo-CB-visa.svg" alt="visa logo"> VISA                
                 </div>
             </div>
-
         </div>
     </div>
 </template>

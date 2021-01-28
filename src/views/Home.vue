@@ -2,6 +2,7 @@
   <SuiviCmd :commandes="commandes" :articles="articles" />
   <InfoLivraison :commandes="commandes" :client="client" />
   <InfoPaiement :commandes="commandes" />
+  <TotalCommande :tousprix="articles.map(a => a.prix)" />
   <!-- <div>
     <h3>informations commande:</h3>
     <p> id de la commande: {{ commandes.id_cmd }} </p>
@@ -32,6 +33,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import SuiviCmd from './SuiviCommande.vue'
 import InfoLivraison from './InfoLivraison.vue'
 import InfoPaiement from './InfoPaiement.vue'
+import TotalCommande from './TotalCommande.vue'
 
 export default {
 
@@ -50,7 +52,8 @@ export default {
     HelloWorld,
     SuiviCmd,
     InfoLivraison,
-    InfoPaiement
+    InfoPaiement,
+    TotalCommande
   },
 
   mounted() {
