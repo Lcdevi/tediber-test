@@ -41,7 +41,7 @@ export default {
 <style>
 
 #info-livraison {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 #info-livraison .main-div {

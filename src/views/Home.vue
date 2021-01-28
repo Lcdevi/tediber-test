@@ -1,6 +1,7 @@
 <template>
   <SuiviCmd :commandes="commandes" :articles="articles" />
   <InfoLivraison :commandes="commandes" :client="client" />
+  <InfoPaiement :commandes="commandes" />
   <!-- <div>
     <h3>informations commande:</h3>
     <p> id de la commande: {{ commandes.id_cmd }} </p>
@@ -30,6 +31,7 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import SuiviCmd from './SuiviCommande.vue'
 import InfoLivraison from './InfoLivraison.vue'
+import InfoPaiement from './InfoPaiement.vue'
 
 export default {
 
@@ -47,7 +49,8 @@ export default {
   components: {
     HelloWorld,
     SuiviCmd,
-    InfoLivraison
+    InfoLivraison,
+    InfoPaiement
   },
 
   mounted() {
