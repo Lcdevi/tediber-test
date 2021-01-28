@@ -60,7 +60,6 @@ export default {
     box-shadow: 0 0 0.3rem 0 rgb(127 124 137 / 65%);
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 #info-livraison .main-content-div div:nth-child(1) {
     border: none;
@@ -74,6 +73,7 @@ export default {
     height: 1px;
     width: 100%;
     border-top: 1px solid #2c3e50;
+    display: none;
 }
 
 /* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
@@ -83,6 +83,12 @@ export default {
     }
     #info-livraison .main-content-div div {
         padding: 0;
+    }
+    #info-livraison .main-content-div {
+        flex-wrap: wrap;
+    }
+    .divider-livraison-info {
+        display: block;
     }
 }
 
