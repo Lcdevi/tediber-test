@@ -11,7 +11,7 @@
             "pays": "France",
             "mode_livraison": "standard", 
             "paiement": "visa",
-            "suivi_cmd": "step_1", 
+            "suivi_cmd": "step_2", 
             "client_id": "client_01",
             "tarif_livraison": 0,
             "articles" : [

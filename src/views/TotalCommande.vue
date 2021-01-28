@@ -12,7 +12,7 @@
                     </div>
                     <div class="single-info">
                         <p>Livraison</p>
-                        <p>GRATUITE</p>
+                        <p v-if="commandes.tarif_livraison === 0">GRATUITE</p>
                     </div>
                     <div class="single-info">
                         <p>TOTAL : </p>
@@ -41,10 +41,10 @@ export default {
 
 <style>
 #total-commande {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 #total-commande .main-div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;

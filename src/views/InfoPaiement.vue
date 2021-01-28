@@ -23,10 +23,10 @@ export default {
 <style>
 
 #info-pmt {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 #info-pmt .main-div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,7 @@ export default {
     padding: 18px 20px;
 }
 #info-pmt .main-content-div div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
 }

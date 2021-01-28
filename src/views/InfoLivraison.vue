@@ -41,11 +41,11 @@ export default {
 <style>
 
 #info-livraison {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #info-livraison .main-div {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;

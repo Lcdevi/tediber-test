@@ -5,11 +5,12 @@
         </div>
         <div class="main-part">
             <div class="infos part">
-                <div>
-                    <p> Numéro de commande : <span> {{ commandes.numero_cmd }} </span></p>
-                    <p> Date de la commande : <span> {{ commandes.date_cmd }} </span></p>
+                <div class="suivi-infos-div">
+                    <p> N° de commande : <span> {{ commandes.numero_cmd }} </span></p>
+                    <p> Date de commande : <span> {{ commandes.date_cmd }} </span></p>
                     <p> Date d'expedition : <span> {{ commandes.date_exp }} </span></p>
                 </div>
+                <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck1">
                     <div class="label-stroke">
@@ -22,6 +23,7 @@
                         <img v-if="commandes.suivi_cmd === 'step_4'" src="../assets/tediber-etat-livraison-4de4.svg" alt="image etat livraison">
                     </div>
                 </div>
+                <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck2">
                     <div class="label-stroke">
@@ -31,6 +33,7 @@
                         Informations sur les retours
                     </div>
                 </div>
+                <div class="divider-accordion"></div>
             </div>
             <div class="articles part">
                 <p>ARTICLES ({{articles.length}})</p>
@@ -66,8 +69,8 @@ export default {
     content: "";
     height: 1px;
     border-radius: 5px;
-    width: 20%;
-    margin: 10px;
+    width: 25%;
+    margin: 30px;
     background: #dedcdc;
 }
 .zigzag-separateur {
@@ -82,19 +85,19 @@ export default {
 }
 
 #suivi-cmd .main-part {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
 #suivi-cmd .part {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 43vw;
     padding: 20px;
 }
 #suivi-cmd span {
     font-weight: bold;
 }
-.infos {
+#suivi-cmd .suivi-infos-div {
     line-height: 2.5;
 }
 
@@ -109,8 +112,8 @@ input {
   color: #2c3e50;
   overflow: hidden;
   /* border-top: 1px solid black; */
-  border-top: 1px solid #dedcdc;
-  border-bottom: 1px solid #dedcdc;
+  /* border-top: 1px solid #dedcdc; */
+  /* border-bottom: 1px solid #dedcdc; */
 }
 .accordion-content {
     max-height: 0;
@@ -134,15 +137,10 @@ input {
     display: flex;
     align-items: center;
 }
-.label-stroke img {
-    border: 1px solid red;
-    height: 14px;
-}
-input:checked ~ .accordion-content{
+ input:checked ~ .accordion-content {
     max-height: 100vh;
     padding: 1em;
-}
-
+} 
 /*  --------- ARTICLE CARD ----------- */
 .article-card {
     margin: 20px 0;
