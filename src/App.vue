@@ -1,6 +1,6 @@
 <template>
-  <div id="nav">
-    <!-- <router-link to="/">Home</router-link> | -->
+  <!-- <div id="nav">
+    <router-link to="/">Home</router-link> |
     <router-link to="/">Nos produits</router-link>
     <router-link to="/">Le concept</router-link>
     <router-link to="/">Avis</router-link>
@@ -8,29 +8,47 @@
     <router-link to="/">Mon compte</router-link>
     <router-link to="/">Mag</router-link>
     <router-link to="/">Contactez-nous</router-link>
-  </div>
+  </div> -->
+  <NavBar />
   <router-view/>
 </template>
 
+<script>
+import NavBar from './components/NavBar.vue'
+
+export default {
+  components: { NavBar }
+}
+
+</script>
+
 <style>
+@font-face {
+ font-family: "Gill Sans";
+ src: url("./fonts/Gill_Sans_Std_Light.woff2") format("woff2"),
+        url("/fonts/Gill_Sans_Std_Regular.woff2") format("woff2");
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Gill Sans', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
 }
 
-#nav {
-  text-align: center;
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#nav a {
-  margin: 20px;
+*:focus,*:hover {
+  outline: none;
 }
 
-#nav a.router-link-exact-active {
-  color: rgb(73, 73, 73);
-  text-decoration: none;
+h3 {
+  text-transform: uppercase;
 }
+
 </style>

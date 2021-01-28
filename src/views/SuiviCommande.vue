@@ -1,0 +1,164 @@
+<template>
+    <div id="suivi-cmd">
+        <div class="zigzag-separateur">
+            <h2 class="txt-separateur"> suivi de commande </h2>
+        </div>
+        <div class="main-part">
+            <div class="infos part">
+                <div>
+                    <p> Numéro de commande : <span> {{ commandes.numero_cmd }} </span></p>
+                    <p> Date de la commande : <span> {{ commandes.date_cmd }} </span></p>
+                    <p> Date d'expedition : <span> {{ commandes.date_exp }} </span></p>
+                </div>
+                <div class="accordion">
+                    <input type="checkbox" id="chck1">
+                    <div class="label-stroke">
+                        <label class="accordion-label" for="chck1">Suivi commande</label>
+                    </div>
+                    <div class="accordion-content">
+                        <img v-if="commandes.suivi_cmd === 'step_1'" src="../assets/tediber-etat-livraison-1de4.svg" alt="image etat livraison">
+                        <img v-if="commandes.suivi_cmd === 'step_2'" src="../assets/tediber-etat-livraison-2de4.svg" alt="image etat livraison">
+                        <img v-if="commandes.suivi_cmd === 'step_3'" src="../assets/tediber-etat-livraison-3de4.svg" alt="image etat livraison">
+                        <img v-if="commandes.suivi_cmd === 'step_4'" src="../assets/tediber-etat-livraison-4de4.svg" alt="image etat livraison">
+                    </div>
+                </div>
+                <div class="accordion">
+                    <input type="checkbox" id="chck2">
+                    <div class="label-stroke">
+                        <label class="accordion-label" for="chck2">Informations sur les retours</label>
+                    </div>
+                    <div class="accordion-content">
+                        Informations sur les retours
+                    </div>
+                </div>
+            </div>
+            <div class="articles part">
+                <p>ARTICLES ({{articles.length}})</p>
+                <div v-for="article in articles" :key="article.id_article" class="article-card">
+                    <div>
+                        <img :src='article.image' :alt='article.designation'>
+                    </div>
+                    <div>
+                        <h3>{{ article.designation }} tediber</h3>
+                        <span> {{ article.prix }} € </span>
+                        <p>TAILLE : {{ article.largeur }} x {{ article.longueur }} cm</p>
+                        <p>QTE : {{ article.quantité }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: ['commandes', 'articles']
+}
+</script>
+
+<style>
+.txt-separateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt-separateur::before, .txt-separateur::after {
+    content: "";
+    height: 1px;
+    border-radius: 5px;
+    width: 20%;
+    margin: 10px;
+    background: #dedcdc;
+}
+.zigzag-separateur {
+    /* border: 1px solid red; */
+    padding: 40px;
+}
+.zigzag-separateur::after {
+    display: flex;
+    justify-content: center;
+    content: url(../assets/zigzag.svg);
+    margin: 15px 0 0 0;
+}
+
+#suivi-cmd .main-part {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+#suivi-cmd .part {
+    border: 1px solid red;
+    width: 45vw;
+    padding: 20px;
+}
+#suivi-cmd span {
+    font-weight: bold;
+}
+.infos {
+    line-height: 2.5;
+}
+
+/*  --------- ACCORDEON ----------- */
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion {
+  width: 100%;
+  color: #2c3e50;
+  overflow: hidden;
+  /* border-top: 1px solid black; */
+  border-top: 1px solid #dedcdc;
+  border-bottom: 1px solid #dedcdc;
+}
+.accordion-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: red;
+    background: white;
+    transition: all .35s;
+}
+.accordion-label {
+    cursor: pointer;
+    margin-right: 20px;
+}
+.accordion-label::after {
+    content: url(../assets/acc-stroke.png);
+    margin: 20px;
+    cursor: pointer;
+}
+.label-stroke {
+    /* border: 1px solid pink; */
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.label-stroke img {
+    border: 1px solid red;
+    height: 14px;
+}
+input:checked ~ .accordion-content{
+    max-height: 100vh;
+    padding: 1em;
+}
+
+/*  --------- ARTICLE CARD ----------- */
+.article-card {
+    margin: 20px 0;
+    box-shadow: 0 0 0.3rem 0 rgb(127 124 137 / 65%);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.article-card div {
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 10px 0 0;
+    line-height: 1.5;
+}
+
+
+</style>

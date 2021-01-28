@@ -1,7 +1,6 @@
 <template>
-  <h1>TEDIBER TEST</h1>
-
-  <div>
+  <SuiviCmd :commandes="commandes" :articles="articles" />
+  <!-- <div>
     <h3>informations commande:</h3>
     <p> id de la commande: {{ commandes.id_cmd }} </p>
     <p> numéro de commande: {{ commandes.numero_cmd }} </p>
@@ -22,12 +21,13 @@
     <p> prénom du client: {{ client.client_prenom }} </p>
     <p> nom du client: {{ client.client_nom }} </p>
     <p> client téléphone: {{ client.client_tel }} </p>
-  </div>
+  </div> -->
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import SuiviCmd from './SuiviCommande.vue'
 
 export default {
 
@@ -43,7 +43,8 @@ export default {
   },
   
   components: {
-    HelloWorld
+    HelloWorld,
+    SuiviCmd
   },
 
   mounted() {
@@ -76,3 +77,12 @@ export default {
 
 }
 </script>
+
+
+<style>
+h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+</style>

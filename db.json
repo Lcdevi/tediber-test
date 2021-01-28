@@ -2,18 +2,18 @@
     "commandes": [
         {   "id_cmd": "001_id", 
             "numero_cmd": "405560003", 
-            "date_cmd": "01/05/2019", 
-            "date_exp": "03/05/2019",
-            "date_reception": "09/05/2019",
+            "date_cmd": "1 mai 2019", 
+            "date_exp": "3 mai 2019",
+            "date_reception": "date reception",
             "adresse_livraison": "57 rue Jean Pierre Timbaud", 
             "mode_livraison": "standard", 
             "paiement": "visa",
-            "suivi_cmd": "step_2", 
-            "client_id": "client_01",
+            "suivi_cmd": "step_1", 
+            "client_id": "client_02",
             "articles" : [
-                { "id_article": "matelas001_id", "designation": "L'incroyable matelas", "quantité": 1, "largeur": "160", "longueur": "200", "prix": 750 },
-                { "id_article": "oreiller001_id", "designation": "L'incroyable oreiller", "quantité": 2, "largeur": "60 ", "longueur": "60", "prix": 85 },
-                { "id_article": "couette001_id", "designation": "l'incroyable couette", "quantité": 1, "largeur": "240", "longueur": "220", "prix": 210 }
+                { "id_article": "matelas001_id", "designation": "L'incroyable matelas", "quantité": 1, "largeur": "160", "longueur": "200", "prix": 750, "image": "https://res.cloudinary.com/lcdevicloud/image/upload/v1611840989/Tediber/tediber-matelas-img_yajmbn.png" },
+                { "id_article": "oreiller001_id", "designation": "L'incroyable oreiller", "quantité": 2, "largeur": "60 ", "longueur": "60", "prix": 85, "image": "https://res.cloudinary.com/lcdevicloud/image/upload/v1611840996/Tediber/tediber-oreiller-img_x2r1qq.png" },
+                { "id_article": "couette001_id", "designation": "l'incroyable couette", "quantité": 1, "largeur": "240", "longueur": "220", "prix": 210, "image": "https://res.cloudinary.com/lcdevicloud/image/upload/v1611840981/Tediber/tediber-couette-img_gadvgi.png" }
             ] 
         }
     ],
