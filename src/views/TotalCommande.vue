@@ -74,4 +74,12 @@ export default {
     font-weight: bold;
 }
 
+
+/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
+@media (max-width: 376px) {
+    #total-commande #wrap-infos {
+        width: 100%;
+    }
+}
+
 </style>

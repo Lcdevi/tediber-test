@@ -60,7 +60,7 @@ export default {
   },
 
   mounted() {
-      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/commandes')
+      fetch('http://localhost:3000/commandes')
         .then(res => res.json())
         .then(data => {
           console.log("data[0] >>>>>>>>>>>> ", data[0]);
@@ -74,9 +74,9 @@ export default {
             this.paiement = "mastercard"
           }
         })
-      .catch(err => console.log(err.message))
+        .catch(err => console.log(err.message))
 
-      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/clients')
+      fetch('http://localhost:3000/clients')
         .then(res => res.json())
         .then(data => {
           console.log("data clients >>>>>>>>>>", data)
@@ -85,6 +85,7 @@ export default {
           this.client = data[indexClient]
           console.log("le client >>>>>>>>", data[indexClient])
         })
+        .catch(err => console.log(err.message))
   }
 
 }
@@ -96,6 +97,7 @@ h2 {
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 </style>

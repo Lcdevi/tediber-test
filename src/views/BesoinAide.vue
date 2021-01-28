@@ -71,4 +71,15 @@
     border-top: 1px solid #2c3e50;
     margin: 10px 0;
 }
+
+
+/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
+@media (max-width: 376px) {
+    
+    .accordion-content-aide {
+        padding: 0px;
+    }
+
+}
+
 </style>

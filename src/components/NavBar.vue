@@ -65,4 +65,19 @@
     /* border: 1px solid red; */
 }
 
+/* ------- RESPONSIVE DESIGN POUR IPHONE X -------- */
+@media (max-width: 376px) {
+    
+    
+    #navbar-mainimage {
+        display: none;
+    }
+    .navbar-part1 a:nth-child(1n+2) {
+        display: none;
+    }
+    .navbar-part2 a:nth-child(-1n+4) {
+        display: none;
+    }
+
+}
 </style>

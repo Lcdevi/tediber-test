@@ -1,6 +1,6 @@
 <template>
     <div id="suivi-cmd">
-        <div class="zigzag-separateur">
+        <div class="zigzag-separateur zigzag-top">
             <h2 class="txt-separateur"> suivi de commande </h2>
         </div>
         <div class="main-part">
@@ -158,5 +158,37 @@ input {
     line-height: 1.5;
 }
 
+/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
+@media (max-width: 376px) {
+    
+    .txt-separateur {
+        font-size: 22px;
+    }
+    .txt-separateur::before, .txt-separateur::after {
+        content: "";
+        height: 1px;
+        border-radius: 5px;
+        width: 50px;
+        background: #dedcdc;
+        margin: 0px;
+    }
+    .zigzag-separateur {
+        padding: 10px 0 20px 0;
+    }
+    #suivi-cmd .main-part {
+        flex-direction: column;
+    }   
+    #suivi-cmd .part {
+        width: 100vw;
+        padding: 0 20px 20px 20px;
+    }
+    .zigzag-top {
+        padding-top: 40px;
+    }
+    .accordion-content img {
+        width: 80vw;
+    }
+
+}
 
 </style>
