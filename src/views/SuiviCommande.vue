@@ -88,7 +88,7 @@ export default {
 }
 #suivi-cmd .part {
     border: 1px solid red;
-    width: 45vw;
+    width: 43vw;
     padding: 20px;
 }
 #suivi-cmd span {
