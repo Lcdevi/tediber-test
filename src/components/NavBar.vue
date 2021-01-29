@@ -30,7 +30,7 @@
 
 <style>
 #nav {
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
   display: flex;
   justify-content: center;
   align-items: center;
