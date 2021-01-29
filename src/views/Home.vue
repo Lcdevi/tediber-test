@@ -1,31 +1,11 @@
 <template>
+<div v-if="client">
   <SuiviCmd :commandes="commandes" :articles="articles" />
   <InfoLivraison :commandes="commandes" :client="client" />
   <InfoPaiement :commandes="commandes" />
   <TotalCommande :commandes="commandes" :tousprix="articles.map(a => a.prix*a.quantité)" />
   <BesoinAide />
-  <!-- <div>
-    <h3>informations commande:</h3>
-    <p> id de la commande: {{ commandes.id_cmd }} </p>
-    <p> numéro de commande: {{ commandes.numero_cmd }} </p>
-    <p> date de la commande: {{ commandes.date_cmd }} </p>
-    <p> date d'expedition: {{ commandes.date_exp }} </p>
-    <p> date de récéption: {{ commandes.date_reception }} </p>
-    <p> adresse de livraison: {{ commandes.adresse_livraison }} </p>
-    <p v-if="this.paiement === 'visa'"> paiement visa </p>
-    <p v-if="this.paiement === 'paypal'"> paiment paypal </p>
-    <p v-if="this.paiement === 'mastercard'"> paiement mastercard </p>
-    <h3>articles:</h3>
-    <div v-for="article in articles" :key="article.id_article">
-      <p> {{ article.designation }} </p>
-      <p> {{ article.prix }} €- </p>
-    </div>
-    <h3>informations client:</h3>
-    <p> id du client: {{ client.client_id }} </p>
-    <p> prénom du client: {{ client.client_prenom }} </p>
-    <p> nom du client: {{ client.client_nom }} </p>
-    <p> client téléphone: {{ client.client_tel }} </p>
-  </div> -->
+</div>
 </template>
 
 <script>
