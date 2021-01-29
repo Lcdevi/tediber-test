@@ -1,5 +1,8 @@
 <template>
   <div id="nav">
+    <div class="navbar-part0">
+        <div class="barres-menu"></div>
+    </div>
     <div class="navbar-part1">
         <router-link to="/">
             <img src="../assets/logo-tediber-text.svg" alt="tediber-logo-text">
@@ -29,7 +32,6 @@
 #nav {
   /* border: 1px solid red; */
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
   height: 80px;
@@ -42,7 +44,6 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .navbar-part1 {
     /* border: 2px solid yellow; */
     display: flex;
@@ -62,8 +63,43 @@
 }
 
 #navbar-mainimage {
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
 }
+
+/* ------- BURGER MENU --------*/
+.navbar-part0 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+  width: 100vw;
+  /* border: 1px solid yellow; */
+}
+.barres-menu {
+  width: 21px;
+  height: 2.2px;
+  background-color: #202447;
+  border-radius: 4px;
+  margin: 0 0 0 28px;
+}
+.barres-menu::before,
+.barres-menu::after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 2.2px;
+  background-color: #202447;
+  border-radius: 5px;
+}
+.barres-menu::after {
+  transform: translateY(-6.5px);
+}
+.barres-menu::before {
+  transform: translateY(6.5px);
+}
+
 
 /* ------- RESPONSIVE DESIGN POUR IPHONE X -------- */
 @media (max-width: 376px) {
@@ -78,6 +114,23 @@
     .navbar-part2 a:nth-child(-1n+4) {
         display: none;
     }
-
+    .navbar-part0 {
+        display: block;
+    }
+    .navbar-part1 {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+    .navbar-part2 {
+        padding: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar-part2 img {
+        margin: 0 22px 0 0;
+    }
 }
 </style>
