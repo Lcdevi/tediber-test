@@ -1,7 +1,11 @@
 <template>
-<div v-if="client">
+<div v-if="commandes">
   <SuiviCmd :commandes="commandes" :articles="articles" />
-  <InfoLivraison :commandes="commandes" :client="client" />
+  <div v-if="commandes">
+    <div v-if="client">
+    <InfoLivraison :commandes="commandes" :client="client" />
+    </div>
+  </div>
   <InfoPaiement :commandes="commandes" />
   <TotalCommande :commandes="commandes" :tousprix="articles.map(a => a.prix*a.quantité)" />
   <BesoinAide />
@@ -43,32 +47,54 @@ export default {
   },
 
   mounted() {
-      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/commandes')
+      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/db')
         .then(res => res.json())
         .then(data => {
-          console.log("data[0] >>>>>>>>>>>> ", data[0]);
-          this.commandes = data [0];
-          this.articles = data[0].articles;
-          if(data[0].paiement === "visa") {
+          console.log("data[0] >>>>>>>>>>>> ", data.commandes[0]);
+          this.commandes = data.commandes[0];
+          this.articles = data.commandes[0].articles;
+          if(data.commandes[0].paiement === "visa") {
             this.paiement = "visa"
-          } else if(data[0].paiement === "paypal") {
+          } else if(data.commandes[0].paiement === "paypal") {
             this.paiement = "paypal"
           } else {
             this.paiement = "mastercard"
-          }
+          };
+          console.log("data client >>>>>>>>>>>>>>", data.clients)
+          console.log("client id >>>>>>>", this.commandes.client_id)
+          let indexClient = data.clients.findIndex(i => i.client_id === this.commandes.client_id)
+          console.log("indexclient", indexClient)
+          console.log("le client >>>>>>>>", data.clients[indexClient])
+          this.client = data.clients[indexClient]
         })
         .catch(err => console.log(err.message))
 
-      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/clients')
-        .then(res => res.json())
-        .then(data => {
-          console.log("data clients >>>>>>>>>>", data)
-          console.log("client id >>>>>>>", this.commandes.client_id)
-          let indexClient = data.findIndex(i => i.client_id === this.commandes.client_id)
-          this.client = data[indexClient]
-          console.log("le client >>>>>>>>", data[indexClient])
-        })
-        .catch(err => console.log(err.message))
+      // fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/commandes')
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     console.log("data[0] >>>>>>>>>>>> ", data[0]);
+      //     this.commandes = data [0];
+      //     this.articles = data[0].articles;
+      //     if(data[0].paiement === "visa") {
+      //       this.paiement = "visa"
+      //     } else if(data[0].paiement === "paypal") {
+      //       this.paiement = "paypal"
+      //     } else {
+      //       this.paiement = "mastercard"
+      //     }
+      //   })
+      //   .catch(err => console.log(err.message))
+
+      // fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/clients')
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     console.log("data clients >>>>>>>>>>", data)
+      //     console.log("client id >>>>>>>", this.commandes.client_id)
+      //     let indexClient = data.findIndex(i => i.client_id === this.commandes.client_id)
+      //     this.client = data[indexClient]
+      //     console.log("le client >>>>>>>>", data[indexClient])
+      //   })
+      //   .catch(err => console.log(err.message))
   }
 
 }
