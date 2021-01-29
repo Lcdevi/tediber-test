@@ -73,8 +73,8 @@
 }
 
 
-/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
-@media (max-width: 376px) {
+/* ------- RESPONSIVE DESIGN POUR < 765 (IPAD) -------- */
+@media (max-width: 765px) {
     
     .accordion-content-aide {
         padding: 0px;

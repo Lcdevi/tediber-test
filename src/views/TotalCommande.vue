@@ -75,8 +75,8 @@ export default {
 }
 
 
-/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
-@media (max-width: 376px) {
+/* ------- RESPONSIVE DESIGN POUR < 765 -------- */
+@media (max-width: 765px) {
     #total-commande #wrap-infos {
         width: 100%;
     }

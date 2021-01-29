@@ -158,8 +158,8 @@ input {
     line-height: 1.5;
 }
 
-/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
-@media (max-width: 376px) {
+/* ------- RESPONSIVE DESIGN POUR < 765 -------- */
+@media (max-width: 765px) {
     
     .txt-separateur {
         font-size: 22px;

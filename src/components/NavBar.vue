@@ -50,7 +50,7 @@
     justify-content: space-between;
     align-items: center;
     width: 50vw;
-    padding: 0 73px 0 20px;
+    padding: 0 70px 0 20px;
 }
 
 .navbar-part2 {
@@ -59,7 +59,7 @@
     justify-content: space-between;
     align-items: center;
     width: 50vw;
-    padding: 0 20px 0 73px;
+    padding: 0 70px 0 40px;
 }
 
 #navbar-mainimage {
@@ -101,8 +101,8 @@
 }
 
 
-/* ------- RESPONSIVE DESIGN POUR IPHONE X -------- */
-@media (max-width: 376px) {
+/* ------- RESPONSIVE DESIGN POUR < 765 (IPAD) -------- */
+@media (max-width: 765px) {
     
     
     #navbar-mainimage {
@@ -133,4 +133,22 @@
         margin: 0 22px 0 0;
     }
 }
+
+/* ------- RESPONSIVE DESIGN POUR IPAD - BREAKPOINT A 1113 -------- */
+
+@media (max-width: 1113px) {
+    #navbar-mainimage {
+      display: none;
+    }
+    .navbar-part1 {
+      padding: 0 10px 0 10px;
+      font-size: 12px;
+    }
+      .navbar-part2 {
+      padding: 0 10px 0 10px;
+      font-size: 12px;
+    }
+}
+
+
 </style>

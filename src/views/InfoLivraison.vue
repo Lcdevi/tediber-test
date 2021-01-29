@@ -76,8 +76,8 @@ export default {
     display: none;
 }
 
-/* ------- RESPONSIVE DESIGN POUR IPHONE X - BREAKPOINT A 376 -------- */
-@media (max-width: 376px) {
+/* ------- RESPONSIVE DESIGN POUR < 765 (IPAD) -------- */
+@media (max-width: 765px) {
     #info-livraison .main-content-div div {
         border-left: none;
     }
@@ -89,6 +89,15 @@ export default {
     }
     .divider-livraison-info {
         display: block;
+    }
+}
+
+
+/* ------- RESPONSIVE DESIGN POUR IPAD - BREAKPOINT A 1113 -------- */
+@media (max-width: 1113px) {
+    #info-livraison .main-content-div div {
+        padding: 5px 5px 5px 10px;
+        margin: 5px;
     }
 }
 
