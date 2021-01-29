@@ -6,6 +6,9 @@
   <TotalCommande :commandes="commandes" :tousprix="articles.map(a => a.prix*a.quantité)" />
   <BesoinAide />
 </div>
+<div v-else>
+  <p>Loading..... datas</p>
+</div>
 </template>
 
 <script>
