@@ -1,4 +1,5 @@
 <template>
+<!-- <div v-if="commandes"> -->
     <div id="info-pmt">
         <div class="zigzag-separateur">
             <h2 class="txt-separateur">informations de paiement</h2>
@@ -11,6 +12,8 @@
             </div>
         </div>
     </div>
+
+<!-- </div> -->
 </template>
 
 <script>

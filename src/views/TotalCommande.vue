@@ -1,4 +1,5 @@
 <template>
+<!-- <div v-if="commandes"> -->
     <div id="total-commande">
         <div class="zigzag-separateur">
             <h2 class="txt-separateur">total commande</h2>
@@ -22,7 +23,9 @@
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
+
+</div>
 </template>
 
 <script>

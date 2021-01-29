@@ -1,4 +1,5 @@
 <template>
+<!-- <div v-if="commandes"> -->
     <div id="suivi-cmd">
         <div class="zigzag-separateur zigzag-top">
             <h2 class="txt-separateur"> suivi de commande </h2>
@@ -47,6 +48,8 @@
             </div>
         </div>
     </div>
+
+<!-- </div> -->
 </template>
 
 <script>
