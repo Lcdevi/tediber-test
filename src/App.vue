@@ -1,14 +1,4 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/">Nos produits</router-link>
-    <router-link to="/">Le concept</router-link>
-    <router-link to="/">Avis</router-link>
-    <router-link to="/">Pub tv</router-link>
-    <router-link to="/">Mon compte</router-link>
-    <router-link to="/">Mag</router-link>
-    <router-link to="/">Contactez-nous</router-link>
-  </div> -->
   <NavBar />
   <router-view/>
 </template>

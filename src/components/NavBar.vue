@@ -30,7 +30,7 @@
 
 <style>
 #nav {
-  border: 1px solid red;
+  border: 1px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,10 +60,6 @@
     align-items: center;
     width: 50vw;
     padding: 0 20px 0 70px;
-}
-
-#navbar-mainimage {
-    /* border: 1px solid green; */
 }
 
 /* ------- BURGER MENU --------*/

@@ -1,14 +1,14 @@
 <template>
-<!-- <div v-if="commandes.length"> -->
+<div v-if="client">
   <SuiviCmd :commandes="commandes" :articles="articles" />
   <InfoLivraison :commandes="commandes" :client="client" />
   <InfoPaiement :commandes="commandes" />
   <TotalCommande :commandes="commandes" :tousprix="articles.map(a => a.prix*a.quantité)" />
   <BesoinAide />
-<!-- </div> -->
-<!-- <div v-else> -->
-  <!-- <p>Loading...datas</p> -->
-<!-- </div> -->
+</div>
+<div v-else>
+  <p>Loading...datas</p>
+</div>
 </template>
 
 <script>
