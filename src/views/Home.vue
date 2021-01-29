@@ -40,7 +40,7 @@ export default {
   },
 
   mounted() {
-      fetch('http://localhost:3000/commandes')
+      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/commandes')
         .then(res => res.json())
         .then(data => {
           console.log("data[0] >>>>>>>>>>>> ", data[0]);
@@ -56,7 +56,7 @@ export default {
         })
         .catch(err => console.log(err.message))
 
-      fetch('http://localhost:3000/clients')
+      fetch('https://my-json-server.typicode.com/Lcdevi/tediber-test/clients')
         .then(res => res.json())
         .then(data => {
           console.log("data clients >>>>>>>>>>", data)
