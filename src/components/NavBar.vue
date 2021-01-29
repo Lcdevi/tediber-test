@@ -59,7 +59,7 @@
     justify-content: space-between;
     align-items: center;
     width: 50vw;
-    padding: 0 70px 0 40px;
+    padding: 0 20px 0 70px;
 }
 
 #navbar-mainimage {

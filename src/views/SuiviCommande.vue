@@ -13,9 +13,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck1">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck1">Suivi commande</label>
-                    </div>
                     <div class="accordion-content">
                         <img v-if="commandes.suivi_cmd === 'step_1'" src="../assets/tediber-etat-livraison-1de4.svg" alt="image etat livraison">
                         <img v-if="commandes.suivi_cmd === 'step_2'" src="../assets/tediber-etat-livraison-2de4.svg" alt="image etat livraison">
@@ -26,9 +24,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck2">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck2">Informations sur les retours</label>
-                    </div>
                     <div class="accordion-content">
                         Informations sur les retours
                     </div>
@@ -108,12 +104,10 @@ input {
   z-index: -1;
 }
 .accordion {
+  /* border: 1px solid yellow; */
   width: 100%;
   color: #2c3e50;
   overflow: hidden;
-  /* border-top: 1px solid black; */
-  /* border-top: 1px solid #dedcdc; */
-  /* border-bottom: 1px solid #dedcdc; */
 }
 .accordion-content {
     max-height: 0;
@@ -123,24 +117,24 @@ input {
     transition: all .35s;
 }
 .accordion-label {
+    /* border: 1px solid blue; */
     cursor: pointer;
-    margin-right: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .accordion-label::after {
     content: url(../assets/acc-stroke.png);
-    margin: 20px;
     cursor: pointer;
+
 }
-.label-stroke {
-    /* border: 1px solid pink; */
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-}
- input:checked ~ .accordion-content {
+input:checked ~ .accordion-content {
     max-height: 100vh;
     padding: 1em;
 } 
+input:checked ~ .accordion-label::after {
+    transform: rotate(180deg);
+}
 /*  --------- ARTICLE CARD ----------- */
 .article-card {
     margin: 20px 0;

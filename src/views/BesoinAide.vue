@@ -8,9 +8,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck3">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck3">FOIRE AUX QUESTIONS TEDIBER</label>
-                    </div>
                     <div class="accordion-content">
                         foire aux questions tediber
                     </div>
@@ -18,9 +16,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck4">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck4">LA GARANTIE TEDIBER</label>
-                    </div>
                     <div class="accordion-content">
                         la garantie tediber
                     </div>
@@ -28,9 +24,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck5">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck5">REPRISE DE L'ANCIENNE LITERIE</label>
-                    </div>
                     <div class="accordion-content">
                         reprise de l'ancienne literie
                     </div>
@@ -38,9 +32,7 @@
                 <div class="divider-accordion"></div>
                 <div class="accordion">
                     <input type="checkbox" id="chck6">
-                    <div class="label-stroke">
                         <label class="accordion-label" for="chck6">COMMENT FAIRE UN RETOUR ?</label>
-                    </div>
                     <div class="accordion-content">
                         comment faire un retour ?
                     </div>
