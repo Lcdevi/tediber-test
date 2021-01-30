@@ -30,7 +30,6 @@
 
 <style>
 #nav {
-  /* border: 1px solid pink; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,13 +38,11 @@
 }
 
 #nav a.router-link-exact-active {
-  /* border: 1px solid blue; */
   color: rgb(73, 73, 73);
   text-decoration: none;
   text-transform: uppercase;
 }
 .navbar-part1 {
-    /* border: 2px solid yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +51,6 @@
 }
 
 .navbar-part2 {
-    /* border: 2px solid yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +67,6 @@
   cursor: pointer;
   display: none;
   width: 100vw;
-  /* border: 1px solid yellow; */
 }
 .barres-menu {
   width: 21px;

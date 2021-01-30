@@ -48,7 +48,6 @@
     margin-bottom: 30px;
 }
 #aide .main-div-aide {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;

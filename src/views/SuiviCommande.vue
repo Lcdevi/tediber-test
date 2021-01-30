@@ -1,5 +1,4 @@
 <template>
-<!-- <div v-if="commandes"> -->
     <div id="suivi-cmd">
         <div class="zigzag-separateur zigzag-top">
             <h2 class="txt-separateur"> suivi de commande </h2>
@@ -48,8 +47,6 @@
             </div>
         </div>
     </div>
-
-<!-- </div> -->
 </template>
 
 <script>
@@ -73,7 +70,6 @@ export default {
     background: #dedcdc;
 }
 .zigzag-separateur {
-    /* border: 1px solid red; */
     padding: 40px;
 }
 .zigzag-separateur::after {
@@ -84,12 +80,10 @@ export default {
 }
 
 #suivi-cmd .main-part {
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
 #suivi-cmd .part {
-    /* border: 1px solid red; */
     width: 43vw;
     padding: 20px;
 }
@@ -107,7 +101,6 @@ input {
   z-index: -1;
 }
 .accordion {
-  /* border: 1px solid yellow; */
   width: 100%;
   color: #2c3e50;
   overflow: hidden;
@@ -147,7 +140,6 @@ input:checked ~ .accordion-label::after {
     align-items: center;
 }
 .article-card div {
-    /* border: 1px solid pink; */
     display: flex;
     flex-direction: column;
     justify-content: center;

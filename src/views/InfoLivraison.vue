@@ -1,5 +1,4 @@
 <template>
-<!-- <div v-if="commandes"> -->
     <div id="info-livraison">
         <div class="zigzag-separateur">
             <h2 class="txt-separateur">informations sur la livraison</h2>
@@ -34,7 +33,6 @@
         </div>
     </div>
 
-<!-- </div> -->
 </template>
 
 <script>
@@ -51,7 +49,6 @@ export default {
 }
 
 #info-livraison .main-div {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;

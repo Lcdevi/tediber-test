@@ -1,5 +1,4 @@
 <template>
-<!-- <div v-if="commandes"> -->
     <div id="info-pmt">
         <div class="zigzag-separateur">
             <h2 class="txt-separateur">informations de paiement</h2>
@@ -12,8 +11,6 @@
             </div>
         </div>
     </div>
-
-<!-- </div> -->
 </template>
 
 <script>
@@ -29,7 +26,6 @@ export default {
     margin-bottom: 30px;
 }
 #info-pmt .main-div {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +38,6 @@ export default {
     padding: 18px 20px;
 }
 #info-pmt .main-content-div div {
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
 }

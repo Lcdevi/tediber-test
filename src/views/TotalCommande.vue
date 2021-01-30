@@ -1,5 +1,4 @@
 <template>
-<!-- <div v-if="commandes"> -->
     <div id="total-commande">
         <div class="zigzag-separateur">
             <h2 class="txt-separateur">total commande</h2>
@@ -22,9 +21,6 @@
                 </div>
             </div>
         </div>
-
-    <!-- </div> -->
-
 </div>
 </template>
 
@@ -47,7 +43,6 @@ export default {
     margin-bottom: 30px;
 }
 #total-commande .main-div {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,13 +57,11 @@ export default {
     align-items: center;
 }
 #total-commande #wrap-infos {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     width: 180px;
 }
 #total-commande .single-info {
-    /* border: 1px solid green; */
     display: flex;
     justify-content: space-between;
     padding: 4px;
