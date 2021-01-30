@@ -1,11 +1,7 @@
 <template>
 <div v-if="commandes">
   <SuiviCmd :commandes="commandes" :articles="articles" />
-  <div v-if="commandes">
-    <div v-if="client">
-    <InfoLivraison :commandes="commandes" :client="client" />
-    </div>
-  </div>
+  <InfoLivraison :commandes="commandes" :client="client" />
   <InfoPaiement :commandes="commandes" />
   <TotalCommande :commandes="commandes" :tousprix="articles.map(a => a.prix*a.quantité)" />
   <BesoinAide />
